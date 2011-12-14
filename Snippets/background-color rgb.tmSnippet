@@ -9,7 +9,7 @@
 	<key>scope</key>
 	<string>source.sass</string>
 	<key>tabTrigger</key>
-	<string>background</string>
+	<string>bg</string>
 	<key>uuid</key>
 	<string>B31D82A6-95A1-4DDF-B3AE-0ED74684A921</string>
 </dict>

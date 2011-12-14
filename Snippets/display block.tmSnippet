@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>display: block$0</string>
+	<string>display: ${1:block}$0</string>
 	<key>name</key>
 	<string>display: block</string>
 	<key>scope</key>
 	<string>source.sass</string>
 	<key>tabTrigger</key>
-	<string>display</string>
+	<string>d</string>
 	<key>uuid</key>
 	<string>D25D6772-9FC7-49B6-8908-E9873CB6C749</string>
 </dict>

@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>padding: ${1:20px}$0</string>
+	<string>height: $0</string>
 	<key>name</key>
-	<string>padding: all</string>
+	<string>height</string>
 	<key>scope</key>
 	<string>source.sass</string>
 	<key>tabTrigger</key>
-	<string>pa</string>
+	<string>h</string>
 	<key>uuid</key>
-	<string>F52F5C4A-2731-4D27-9EEE-770E5BB11F56</string>
+	<string>C155BBBD-AE7B-4E5C-9ABB-0737320979EB</string>
 </dict>
 </plist>
