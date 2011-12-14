@@ -4,6 +4,7 @@ This is a TextMate compatible bundle for using the [Sass](http://sass-lang.com/)
 
 This bundle was originally written in order to provide Sass snippets, but since then there have been many fantastic contributions. Thanks to Github for making it easy to bring all of those contributions together:
 
+[@agibralter](http://github.com/cehoffman)
 [@agibralter](http://github.com/agibralter)
 [@aussiegeek](http://github.com/aussiegeek)
 [@charler](http://github.com/charlesr)
@@ -25,14 +26,14 @@ This bundle was originally written in order to provide Sass snippets, but since 
 
     mkdir -p ~/Library/Application\ Support/TextMate/Bundles
     cd ~/Library/Application\ Support/TextMate/Bundles
-    git clone git://github.com/charlesr/ruby-sass-tmbundle.git "Ruby Sass.tmbundle"
+    git clone git://github.com/elia/ruby-sass-tmbundle.git "Ruby Sass.tmbundle"
     osascript -e 'tell app "TextMate" to reload bundles'
 
 #### Without Git:
 
     mkdir -p ~/Library/Application\ Support/TextMate/Bundles
     cd ~/Library/Application\ Support/TextMate/Bundles
-    wget http://github.com/charlesr/ruby-sass-tmbundle/tarball/master
+    wget http://github.com/elia/ruby-sass-tmbundle/tarball/master
     tar zxf aussiegeek-ruby-sass-tmbundle*.tar.gz
     rm aussiegeek-ruby-sass-tmbundle*.tar.gz
     mv aussiegeek-ruby-sass-tmbundle* "Ruby on Rails.tmbundle"
@@ -47,7 +48,7 @@ A reasonably up-to-date version of this bundle is usually available for installa
 Make sure msysGit is installed, then at the command line:
     
     cd %appdata%\e\Bundles
-    git clone git://github.com/charlesr/ruby-sass-tmbundle.git "Ruby Sass.tmbundle"
+    git clone git://github.com/elia/ruby-sass-tmbundle.git "Ruby Sass.tmbundle"
 
 In E, select *Bundles > Edit Bundles > Reload Bundles*
     
