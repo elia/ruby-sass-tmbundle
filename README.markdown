@@ -20,6 +20,13 @@ This bundle was originally written in order to provide Sass snippets, but since 
 
 ## Installation
 
+### Textmate 2
+
+    mkdir -p ~/Library/Application\ Support/Avian/Bundles
+    cd ~/Library/Application\ Support/Avian/Bundles
+    git clone git://github.com/elia/ruby-sass-tmbundle.git ruby-sass.tmbundle
+
+
 ### Textmate (OS X)
 
 #### With Git:
@@ -42,16 +49,16 @@ This bundle was originally written in order to provide Sass snippets, but since 
 ### E Text Editor (Windows)
 
 A reasonably up-to-date version of this bundle is usually available for installation via the Bundles Manager (*Bundles > Edit Bundles > Manage Bundles*). Unless you want the bleeding edge version of this bundle, install from there. Otherwise:
-    
+
 #### With msysGit:
-  
+
 Make sure msysGit is installed, then at the command line:
-    
+
     cd %appdata%\e\Bundles
     git clone git://github.com/elia/ruby-sass-tmbundle.git "Ruby Sass.tmbundle"
 
 In E, select *Bundles > Edit Bundles > Reload Bundles*
-    
+
 #### Without msysGit:
 
 Download the bundle using Github's "Download" button and extract the content of the folder contained in the zip file into:
