@@ -102,7 +102,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^\s*(\+)([a-zA-Z0-9_-]+)</string>
+			<string>^\s*(\$)([a-zA-Z0-9_-]+)</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -150,7 +150,7 @@
 						</dict>
 					</dict>
 					<key>match</key>
-					<string>(\!)([a-zA-Z0-9_-]+)</string>
+					<string>(\$)([a-zA-Z0-9_-]+)</string>
 					<key>name</key>
 					<string>meta.variable-usage.sass</string>
 				</dict>
@@ -166,7 +166,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^(=)([a-zA-Z0-9_-]+)</string>
+			<string>^($)([a-zA-Z0-9_-]+):</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -207,7 +207,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^\s*(\+)([a-zA-Z0-9_-]+)</string>
+			<string>^\s*(\$)([a-zA-Z0-9_-]+)</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -298,7 +298,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b(a|abbr|acronym|address|area|article|aside|audio|b|base|big|blockquote|body|br|button|canvas|caption|cite|code|col|colgroup|command|datalist|dd|del|details|dfn|div|dl|dt|em|embed|fieldset|figure|footer|form|frame|frameset|(h[1-6])|head|header|hgroup|hr|html|i|iframe|img|input|ins|kbd|keygen|label|legend|li|link|map|mark|meta|meter|nav|noframes|noscript|object|ol|optgroup|option|output|p|param|pre|progress|q|rp|rt|ruby|samp|script|section|select|small|source|span|strike|strong|sub|sup|table|tbody|td|textarea|tfoot|th|thead|time|title|tr|tt|ul|var|video)\b</string>
+					<string>\b(a|abbr|acronym|address|area|article|aside|audio|b|base|big|blockquote|body|br|button|canvas|caption|cite|code|col|colgroup|command|datalist|dd|del|details|dfn|div|dl|dt|em|embed|fieldset|figure|figcaption|footer|form|frame|frameset|(h[1-6])|head|header|hgroup|hr|html|i|iframe|img|input|ins|kbd|keygen|label|legend|li|link|map|mark|meta|meter|nav|noframes|noscript|object|ol|optgroup|option|output|p|param|pre|progress|q|rp|rt|ruby|samp|script|section|select|small|source|span|strike|strong|sub|sup|table|tbody|td|textarea|tfoot|th|thead|time|title|tr|tt|ul|var|video)\b</string>
 					<key>name</key>
 					<string>entity.name.tag.css.sass</string>
 				</dict>
@@ -449,6 +449,48 @@
 					<string>#string-double</string>
 				</dict>
 				<dict>
+					<key>match</key>
+					<string>([^"'\n\S;]+)</string>
+					<key>name</key>
+					<string>variable.parameter.url.sass</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>^\s*((@)include\b)</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.at-rule.include.sass</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.keyword.sass</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>(;)?$</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>invalid.illegal.punctuation.sass</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>meta.at-rule.include.sass</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#string-double</string>
+				</dict>
+				<dict>
 					<key>begin</key>
 					<string>(url)\s*(\()\s*</string>
 					<key>beginCaptures</key>
@@ -494,7 +536,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>([^"'\n;]+)</string>
+					<string>([^"'\n\S;]+)</string>
 					<key>name</key>
 					<string>variable.parameter.url.sass</string>
 				</dict>
@@ -653,6 +695,10 @@
 			<key>patterns</key>
 			<array>
 				<dict>
+					<key>include</key>
+					<string>#sass-variable</string>
+				</dict>
+				<dict>
 					<key>match</key>
 					<string>([-=+*/])</string>
 					<key>name</key>
@@ -742,10 +788,6 @@
 					<string>#string-double</string>
 				</dict>
 				<dict>
-					<key>include</key>
-					<string>#string-single</string>
-				</dict>
-				<dict>
 					<key>begin</key>
 					<string>(rgb|url|attr|counter|counters|local|format)\s*(\()</string>
 					<key>beginCaptures</key>
@@ -808,6 +850,26 @@
 					<string>keyword.other.important.sass</string>
 				</dict>
 			</array>
+		</dict>
+		<key>sass-variable</key>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.entity.sass</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>variable.other.sass</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(\$)([a-zA-Z0-9_-]+)\b</string>
+			<key>name</key>
+			<string>meta.variable-usage.sass</string>
 		</dict>
 		<key>string-double</key>
 		<dict>
