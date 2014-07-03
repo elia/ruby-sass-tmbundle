@@ -17,7 +17,7 @@
 	<key>inputFormat</key>
 	<string>text</string>
 	<key>keyEquivalent</key>
-	<string>~@c</string>
+	<string>@b</string>
 	<key>name</key>
 	<string>Convert CSS to SASS</string>
 	<key>outputCaret</key>
